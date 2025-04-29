@@ -8,4 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use(NotesRoute);
 
-app.listen(5000, () => console.log("Server terhubung"));
+// Tambahkan ini
+app.get("/", (req, res) => {
+  res.send("API is running on Cloud Run 🚀");
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server terhubung di port ${PORT}`));
