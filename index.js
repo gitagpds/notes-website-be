@@ -10,7 +10,7 @@ app.use(NotesRoute);
 
 // Tambahkan ini
 app.get("/", (req, res) => {
-  res.send("API is running on Cloud Run 🚀");
+  res.send("API is running on Cloud Run YIPPIEEE 🚀");
 });
 
 const PORT = process.env.PORT || 5000;
